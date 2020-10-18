@@ -53,10 +53,47 @@ while(loading < 100){ //while the loading is smaller then 100 its going to keep 
 // OBJECTS 
 
 const user = {
-    name: "Erna"
+    name: "Sara",
     age: 30,
     married: false, 
     purchases: ["phone", "clothes", "shoes", "coffee"] 
-};
+}; // also possible to add function that are specific to this object they are called methods
 
-console.log(user.purchases);
+console.log(user.purchases); // we get the list of the purchases
+
+
+
+//for...in
+//  variable   object with three properties inside         label      value
+var cities = {'Iceland':'Reykjavik', 'Greenland':'Nuuk', 'Denmark':'Copenhagen'}
+                //properties
+
+
+// var in object
+// use "let" for loops (recommended)
+// looking at the properties that are inside object called in this case "cities"
+// the "prop" part can be called whatever I want, just in this case reffered to properties
+// prop is a variable that is holding all of those values (inside the cities)
+//cities is the thing that its looping through 
+//if there are for example 3 things it will loop 3 times 
+for(let prop in cities){
+    //console.log(prop);
+    //console.log(cities[prop])
+// if I want to get all of the information in one statement I will use
+    console.log("in", prop, "the capital is", cities[prop]);
+//  this will look like 
+// "in Iceland the capital is Reykjavik" and so on with all of the cities. 
+}
+// we use the for...in loop - if looking at a object instead of array 
+//and you dont know how many items there are because the length is missing
+//still the variable as a counter through the loop 
+// the for.. in can also be used for a Array 
+
+// it would just be 0, 1, 2, 3, 4 instead of in this case the country name. 
+// would be like: 
+
+var pets = ["atlas", "klaki", "marvel", "bangsi"]
+for(let propp in pets){
+    console.log("in", propp, "we have the names", pets[propp]);
+    // this will be: "in 0 we have the name atlas" "in 1 we have the name klaki" and so on. 
+}
